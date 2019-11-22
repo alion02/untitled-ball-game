@@ -1,0 +1,11 @@
+body {
+	margin: 0;
+}
+#display-container {
+	width: 100%;
+	text-align: center;
+}
+#display {
+	image-rendering: pixelated;
+	display: inline;
+}
