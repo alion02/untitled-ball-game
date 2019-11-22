@@ -167,8 +167,7 @@ export class Simulation {
 			balls = tempBalls.sort(compareBalls);
 		}
 
-		for (let i = 0; i < 2; ++i)
-		{
+		for (let i = 0; i < 2; ++i) {
 			const tempBalls = [];
 			let runLength, prevAdjacent = null;
 
@@ -271,7 +270,7 @@ export class Simulation {
 			// 	if (gravity && this.isFree(position + this.width)) {
 			// 		position += this.width;
 			// 	}
-				
+
 			// 	const newPos = occupied.has(position) ? occupied.get(position) - this.width : position;
 			// 	occupied.set(position, newPos);
 			// 	if (newPos === ball.position) {
@@ -292,7 +291,7 @@ export class Simulation {
 				if (this.map[ball.position] !== Tile.teleporter && this.map[ball.position + this.width] === Tile.air) {
 					ball.position += this.width;
 				}
-				
+
 				while (this.map[ball.position] === Tile.teleporter || occupied.has(ball.position)) {
 					ball.position -= this.width;
 				}

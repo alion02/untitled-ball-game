@@ -1,5 +1,5 @@
-import { Simulation } from '/simulation.js';
-import { setResponsiveWhile } from '/lib.js';
+import { Simulation } from './simulation.js';
+import { setResponsiveWhile } from './lib.js';
 
 const canvas = document.querySelector('#display');
 const ctx = canvas.getContext('2d');
@@ -43,7 +43,7 @@ function updateCanvasSize() {
 					let running = false;
 					const playBtn = document.querySelector('#play');
 					const pauseBtn = document.querySelector('#pause');
-	
+
 					playBtn.addEventListener('click', () => {
 						running = true;
 						stepBtn.disabled = true;
@@ -54,7 +54,7 @@ function updateCanvasSize() {
 							return running;
 						}, render, 20);
 					});
-	
+
 					pauseBtn.addEventListener('click', () => {
 						running = false;
 						stepBtn.disabled = false;
